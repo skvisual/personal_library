@@ -13,10 +13,10 @@ class DB {
     this.connection = connection;
   }
   // DEFINES A METHOD, THAT WILL MAKE A QUERY TO OUR DB AND WILL RETURN ALL BOOKS IN THE BOOKS TABLE. 
-  getAllBooks(firstName, lastName, title, coverPhoto, authors, books){
-    const queryString = "SELECT * FROM ?? INNER JOIN ?? ON ? = ?";
+  getAllBooks(table){
+    const queryString = "SELECT * FROM books";
     // returns a promise so that when it's called we can use .then() and .catch()
-   return this.connection.query(queryString, [firstName, lastName, title, coverPhoto, authors, books])
+   return this.connection.query(queryString, [table])
   //  return this.connection.query('SELECT firstName, lastName, title, coverPhoto FROM authors INNER JOIN books ON authors.id = books.authorId')
  
    // THIS METHOD ALSO RETURNS THE RESPONSE FROM THE DATABASE.
