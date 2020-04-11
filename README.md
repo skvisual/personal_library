@@ -1,49 +1,20 @@
 # Personal Library
+The Personal Library is your very own BOOK DATABASE! It is a great way to keep track of your favorite books, or books you want to read in the future. It allows a user to add a book with title and a cover photo, and independently an author and notes to attach to the books you are adding. Stop taking screenshots of books that you'll end up accidently deleting and keep your reading list up-to-date with The Personal Library!
 
-## Instructions
+## Installation
 
-### Phase 1 - Database
-- Create a database called library_db
-- Create 3 tables
-  - Authors
-    - firstName
-    - lastName
-  - Books
-    - title
-    - coverPhoto
-    - authorId
-  - Notes
-    - note
-    - bookId
+Get the code from https://github.com/skvisual/personal_library
 
-### Phase 2 - Node/MySQL Connection
-- Create a connection to the database using mysql npm package
-- Create a class called DB with the following properties and methods: 
-  - Properties
-    - connection
-  - Methods
-    - getAllBooks
-    - getOneBook
-    - getBookNotes
-    - addBook
-    - addBookNote
-    - **deleteNote
+Run the mySQL using source schema.sql
 
-### Phase 3 - Setup Server
-- Create a localhost connection with express npm package
-- Setup Routes
-  - API Routes
-    - GET route for returning all books
-    - GET route for returning one book
-    - POST route for adding a book
-    - POST route for adding a book note
-    - DELETE route for deleting a note
-  - Test routes with POSTMAN
-  - HTML Routes
-    - /
-    - /library
-    - /addBook
-    - /bookDetail
-  
-### Phase 4 - Connect Client Side to Server
-  - Use AJAX to hit all API routes
+Open your favorite browser and navigate to localhost:8080
+
+You are ready to start building your very own Library!
+
+## Future Developments
+
+4/10/20 - I plan to update the styling of the application to a more contemporary layout. 
+
+## Contact
+
+I would love to hear your comments or suggestions! You can contact me through e-mail at southkvisual@gmail.com or view my GitHub profile at https://www.github.com/skvisual
