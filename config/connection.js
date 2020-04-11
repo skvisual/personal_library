@@ -1,24 +1,26 @@
-// iNSTALL DEPENDENCIES. USE MYSQL BECAUSE WE ARE WORKING IWTH A DB, AND UTIL BECAUSE WE NEED TO USE PROMISIFY
-const mysql = require('mysql'); 
+const mysql = require('mysql');
 const util = require('util');
 
-// CREATE OUR CONNECTION USING CREATECONNECTION METHOD FROM MYSQL.
 const connection = mysql.createConnection({
-    host: 'localhost',
-    port: 3306,
-    user: 'root',
-    password: '0177',
-    database: 'library_db'
-  });
+  host: 'localhost',
+  port: 3306,
+  user: 'root',
+  password: 'root',
+  database: 'library_db'
+});
 
-  //USE THE .CONNECT() METHOD TO MAKE OUR CONNECTION.
-connection.connect();
+connection.connect(function (err) {
+  if (err) {
+    console.error("error connecting: " + err.stack);
+    return;
+  }
+  console.log("connected as id " + connection.threadId);
+});
 
 // we give connection.query access to promises
 // i.e. .then() and .catch()
 connection.query = util.promisify(connection.query);
 
-// EXPORTING OUR CONNECTION SO WE CAN USE IT ON OTHER SHEETS.
 module.exports = connection;
 
 // WITHOUT PROMISIFY

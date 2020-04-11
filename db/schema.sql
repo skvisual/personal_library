@@ -31,11 +31,21 @@ CREATE TABLE notes (
 -- REFERENCES TEH AUTHORS TABLE, AND THE FIRST AND LAST NAME VALUES. INSERTS J.K... IN TO THE TABLE IN THEIR RESPECTIVE COLUMNS
 INSERT INTO authors (firstName, lastName) VALUES ('J. K.', 'Rowling');
 INSERT INTO authors (firstName, lastName) VALUES ('Mark', 'Twain');
+INSERT INTO authors (fristName, lastName) VALUES ('Vince', 'Flynn');
+INSERT INTO authors (firstName, lastName) VALUES ('John', 'Krakauer');
+INSERT INTO authors (firstName, lastName) VALUES ('Dr.', 'Seuss');
 
 INSERT INTO books (title, authorId, coverPhoto) VALUES ("Harry Potter and the Sorcerer\'s Stone", 1, 'https://m.media-amazon.com/images/I/41lnLrvBnML.jpg');
 
 INSERT INTO books (title, authorId, coverPhoto) VALUES ('Harry Potter and the Chamber of Secrets', 1, 'https://m.media-amazon.com/images/I/51OZerWcGCL.jpg');
 
+INSERT INTO books (title, authorId, coverPhoto) VALUES ('The Adventures of Tom Sawyer', 2, 'https://images-na.ssl-images-amazon.com/images/I/51dAqByd3UL.jpg')
+
+INSERT INTO books (title, authorId, coverPhoto) VALUES ('Protect and Defend', 3, 'https://images-na.ssl-images-amazon.com/images/I/51sdyFKbgAL._SX309_BO1,204,203,200_.jpg');
+
+INSERT INTO books (title, authorId, coverPhoto) VALUES ('Into Thin Air', 4, 'https://images-na.ssl-images-amazon.com/images/I/613xliMRGmL.jpg');
+
+INSERT INTO books (title, authorId, coverPhoto) VALUES ('The Lorax', 5 'https://images-na.ssl-images-amazon.com/images/I/911iynWkSOL.jpg');
 
 -- REFERENCES THE FIRST NAME, LAST NAME AND TITLE COLUMNS, JOINS THE AUTHORS AND BOOKS TABLE WHERE THE AUTHOR ID AND BOOK ID MATCH.
 SELECT firstName, lastName, title 
